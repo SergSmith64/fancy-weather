@@ -44,17 +44,22 @@ var proxyUrl  = 'https://cors-anywhere.herokuapp.com/'
 //____ ПРОБУЮ ПОЛУЧИТЬ МОИ ТЕКУЩИЕ КООРДИНАТЫ  ______
 
 //  _________________WebForMySelf____________________
-
+var detectLatitude = 0;
+var detectLongitude = 0;
 function getCoordinat() {
-    navigator.geolocation.getCurrentPosition(showCoordinat, showError);
+    // navigator.geolocation.getCurrentPosition(showCoordinat, showError);
+    navigator.geolocation.getCurrentPosition(showCoordinat);
 }
 function showCoordinat(position) {
-    console.log("Широта:  " + position.coords.latitude + '<br>');
-    console.log("Долгота: " + position.coords.longitude + '<br>');
+    console.log("Широта:  " + position.coords.latitude);
+    console.log("Долгота: " + position.coords.longitude);
+    console.log( 'Это ___' + typeof(position.coords.latitude) );
+    detectLatitude = position.coords.latitude;
 }
 // ____ ВЫВОД КООРДИНАТ ____
 getCoordinat();
-
+console.log('___здесь___' + detectLatitude);
+console.log(detectLongitude);
 
 
 var targetUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.5265&lon=46.0435&appid=084a72f7662b746a323538af696e70cb'
