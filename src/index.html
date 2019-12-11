@@ -1,13 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fancy-Weather</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fancy Weather</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- ________________ Bootstrap-4-CSS _________________ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Fancy-Weather</h1>
-  
+    <!-- ____ TASK - URL ____ https://github.com/rolling-scopes-school/tasks/blob/master/tasks/fancy-weather.md ____ -->
+
+
+<div class="container">
+
+    <header>
+        <div class="tools">
+            <input type="button" class="tools__image btn btn-dark" value="Load">
+            <div class="dropdown tools__language">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">EN</a>
+                    <a class="dropdown-item" href="#">RU</a>
+                    <a class="dropdown-item" href="#">BE</a>
+                </div>
+            </div><!-- /dropdown -->
+            <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> C
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off" checked> F
+                </label>
+            </div>
+        </div>
+        <div class="search">
+            <div class="input-group bm-3">
+                <input type="text" class="form-control" placeholder="Enter a city" aria-level="Enter a town">
+                <div class="input-group-append">
+                    <button class="btn btn-dark" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="header">
+        <div class="header_left">
+            <div class="change-back">FFFFFFFF</div>
+            <div class="change-lang">LLLLLLLLL</div>
+            <div class="change-metric">QQQQQQQQQ</div>
+        </div>
+        <div class="header-right">
+            <div class="form-search">
+                <div class="form-search__field">KKKKKKKKK</div>
+                <button class="form-submit">MMMMMMMMMM</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <main class="wrapper">
+        <section class="today-wrapper">
+            <div class="today-info">
+                <p class="today-info__city">Minsk, Belarus</p>
+                <p class="today-info__date">Mon 28 October</p>
+                <p class="today-info__time">17:28</p>
+            </div>
+            <div class="today-main"></div>
+        </section>
+    </main> -->
+
+
+
+    <section class="sec-app">
+
+        <main>
+            <div class="weather-today">
+                <div class="geo">
+                    <p>
+                        <span class="geo__city"></span>
+                        <span class="geo__country"></span>
+                    </p>
+
+                    <p class="geo__date"> ___Fri 29 November _???_ </p>
+                    <p class="geo__time"> ___17:45 _???_</p>
+                </div>
+                <div class="temp-today">
+                    <p class="temp-today__temp"> ___10_градусов</p>
+                    <div class="temp-today__pic">ИКОНКА-ПОГОДЫ</div>
+                </div>
+                <div class="weather-today">
+                    <p>
+                        <span>СЕГОДНЯ </span>
+                        <span class="weather-today__description"></span>
+                    </p>
+
+                    <p class="weather-today__feels"> ___Ощущения _???_</p>
+
+                    <p>
+                        <span>Ветер</span>
+                        <span class="weather-today__wind"></span>
+                        <span>м/сек</span>
+                    </p>
+                    
+                    <p>
+                        <span>Влажность: </span>
+                        <span class="weather-today__humidity"></span>
+                        <span>%</span>
+                    </p>
+
+                    <!-- ___ дополнительно__ДАВЛЕНИЕ ___ -->
+                    <p>
+                        <span>Давление: </span>
+                        <span class="weather-today__pressure"></span>
+                        <span> Паскалей ???</span>
+                    </p>
+
+                    
+                </div>
+
+            </div>
+
+<!-- ________ ПОГОДА НА ТРИ ДНЯ _________ -->
+
+            <div class="weather-three-days">
+                <div class="weather-three-days-item">
+                    <p>ЗАВТРА:</p>
+                    <div class="first-day">Tuesday_???</div>
+
+                    <p class="temp-day-2__temp"></p>
+
+                    <div class="first-day-grad">7</div>
+                    <div class="first-day-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                
+                <div class="weather-three-days-item">
+                    <p>ПОСЛЕ-ЗАВТРА:</p>
+                    <div class="second-day">Wednesday_???</div>
+                    <div class="second-day-grad">10</div>
+                    <div class="second-day-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                    
+                <div class="weather-three-days-item">
+                    <p>ПОСЛЕ-ПОСЛЕ-ЗАВТРА:</p>
+                    <div class="third-day">Thursday_???</div>
+                    <div class="third-day-grad">8</div>
+                    <div class="third-day-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                
+            </div><!-- /weather-three-days-->
+        </main><!-- /main-->
+
+        <aside>
+            <div class="geolocation">
+                <div class="geolocation-map">
+                    <img src="./assets/img/map-saratov-325x325.jpg" alt="map">
+                </div>
+                <div class="geo-point">
+                    <p>
+                        <span>Latitude: </span>
+                        <span class="geo-point__latitude"></span>
+                    </p>
+                    <p>
+                        <span>Longitude: </span>
+                        <span class="geo-point__longitude"></span>
+                    </p>
+
+                </div>
+            </div>
+        </aside>
+    
+    </section>
+
+
+
+
+</div>
+
+    
+
+<script>
+    //  _________________WebForMySelf____________________
+    // function getCoordinat() {
+    //     navigator.geolocation.getCurrentPosition(showCoordinat, showError);
+    // }
+    // function showCoordinat(position) {
+    //     document.write("Широта:  " + position.coords.latitude + '<br>');
+    //     document.write("Долгота: " + position.coords.longitude + '<br>');
+    // }
+    // function showError(error) {
+    //     switch(error.code) {
+    //         case error.PERMISSION_DENIED:
+    //             alert("Пользователь запретил считывать информацию о своем местоположении!");
+    //         break;
+
+    //         case error.POSITION_UNAVAILABLE:
+    //             alert("Браузер не смог определить местоположение пользователя");
+    //         break;
+
+    //         case error.TIMEOUT:
+    //             alert("Браузер не успел определить местоположение за выделенное ему время");
+    //         break;
+
+    //         case error.UNKNOWN_ERROR:
+    //             alert("Произошла неопределенная ошибка");
+    //         break;
+    //     }
+    // }
+    // ____ ВЫВОД КООРДИНАТ ____
+    // getCoordinat()
+
+
+
+
+    //  __________ ????? __________________________
+
+    // function getCoordinates() {
+    //     navigator.geolocation.getCurrentPosition(showCoordinates);
+    // }
+
+    // function showCoordinates (position) {
+    //     document.write("Широта:  " + position.coords.latitude + '<br>');
+    //     document.write("Долгота: " + position.coords.longitude + '<br>');
+    // }
+
+
+
+    // function getCoordinates() {
+    //     watchID = navigator.geolocation.watchPosition(showCoordinates);
+    // }
+
+    // function stop() {
+    //     if (watchID) {
+    //         navigator.geolocation.cl
+    //     }
+    // }
+
+
+
+// ______ с сайта Mozilla _____
+
+    // var options = {
+    // enableHighAccuracy: true,
+    // timeout: 5000,
+    // maximumAge: 0
+    // };
+
+    // function success(pos) {
+    // var crd = pos.coords;
+
+    // console.log('Ваше текущее местоположение:');
+    // console.log(`Широта: ${crd.latitude}`);
+    // console.log(`Долгота: ${crd.longitude}`);
+    // console.log(`Плюс-минус ${crd.accuracy} метров.`);
+    // };
+
+    // function error(err) {
+    // console.warn(`ERROR(${err.code}): ${err.message}`);
+    // };
+
+    // navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+</script>
+
+<script src="./js/index.js"></script>
+
 </body>
 </html>
