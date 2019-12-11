@@ -36,6 +36,27 @@ var proxyUrl  = 'https://cors-anywhere.herokuapp.com/'
 //     console.log("Fetch Error = ...........");
 //   });
 
+// ==============================================================================================
+
+//____ ОКРУГЛЕНИЕ до 4 знаков после запятой ______
+// console.log(+ 54.77906545555553.toFixed(4));     //  ПОЛУЧАЕТСЯ --> 54.7790
+
+//____ ПРОБУЮ ПОЛУЧИТЬ МОИ ТЕКУЩИЕ КООРДИНАТЫ  ______
+
+//  _________________WebForMySelf____________________
+
+function getCoordinat() {
+    navigator.geolocation.getCurrentPosition(showCoordinat, showError);
+}
+function showCoordinat(position) {
+    console.log("Широта:  " + position.coords.latitude + '<br>');
+    console.log("Долгота: " + position.coords.longitude + '<br>');
+}
+// ____ ВЫВОД КООРДИНАТ ____
+getCoordinat();
+
+
+
 var targetUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.5265&lon=46.0435&appid=084a72f7662b746a323538af696e70cb'
 
 fetch(proxyUrl + targetUrl)
