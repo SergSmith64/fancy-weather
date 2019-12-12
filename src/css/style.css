@@ -3,7 +3,8 @@ body {
   min-width: 320px;
   color: #FFF;
   font-family: 'Montserrat', sans-serif;
-  background: url(../assets/img/bg-3.jpg) no-repeat center center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(8, 15, 26, 0.59)), to(rgba(17, 17, 46, 0.46))), url(../assets/img/bg-3.jpg) no-repeat center center;
+  background: linear-gradient(180deg, rgba(8, 15, 26, 0.59) 0, rgba(17, 17, 46, 0.46) 100%), url(../assets/img/bg-3.jpg) no-repeat center center;
   background-size: cover;
 }
 
