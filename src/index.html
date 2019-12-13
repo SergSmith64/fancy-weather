@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
 
     <!-- ________________ Bootstrap-4-CSS _________________ -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -52,11 +52,11 @@
             <div class="control_button__metric">
                 <div>
                     <input type="radio" name="option" id="radio1" checked />
-                    <label for="radio1">°F</label>
+                    <label for="radio1">°С</label>
                 </div>
                 <div>
                     <input type="radio" name="option" id="radio2" />
-                    <label for="radio2">°С</label>
+                    <label for="radio2">°F</label>
                 </div>
             </div>
             <!-- <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
@@ -74,20 +74,12 @@
 
 
 
-
 <!-- ____ПРАВЫЙ БЛОК____ -->
-        <div class="search">
-            <div class="input-group bm-3">
-                <input type="text" class="form-control" placeholder="Enter a city" aria-level="Enter a town">
-                <div class="input-group-append">
-                    <button class="btn btn-dark" type="button">Search</button>
-                </div>
-            </div>
+        <div class="header-search">
+            <input type="text" placeholder="Search city or ZIP" />
+            <button>search</button>
         </div>
     </header>
-
-
-
 
 
 
@@ -97,12 +89,14 @@
             <div class="weather-today">
                 <div class="geo">
                     <p>
-                        <span class="geo__city"></span>
-                        <span class="geo__country"></span>
+                        <span class="geo__city">Saratov</span>
+                        <span class="geo__country">RU</span>
                     </p>
 
-                    <p class="geo__date"> __Fri 29 Nov _???_ </p>
-                    <p class="geo__time"> __17:45 _???_</p>
+                    <p>
+                        <span class="geo__date">Fri 29 Nov</span>
+                        <span class="geo__time">17:45</span>
+                    </p>
                 </div>
 
                 <div class="temp-today">
@@ -155,34 +149,33 @@
 <!-- ________ ПОГОДА НА ТРИ ДНЯ _________ -->
 
             <div class="weather-three-days">
+
                 <div class="weather-three-days-item">
                     <p>ЗАВТРА:</p>
-                    <div class="first-day">Tuesday_???</div>
+                    <div class="day-2">Tuesday_</div>
 
                     <p class="temp-day-2__temp"></p>
 
-                    <div class="first-day-grad">7</div>
-                    <div class="first-day-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
+
                 </div>
-                
+<!-- ____________ -->                
                 <div class="weather-three-days-item">
                     <p>ПОСЛЕ-ЗАВТРА:</p>
-                    <div class="second-day">Wednesday_???</div>
-                    <div class="second-day-grad">10</div>
-                    <div class="second-day-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
+
+                    <div class="day-3">Wednesday_</div>
+
+                    <p class="temp-day-3__temp"></p>
+
+
                 </div>
-                    
+<!-- ____________ -->
                 <div class="weather-three-days-item">
-                    <p>ПОСЛЕ-ПОСЛЕ-ЗАВТРА:</p>
-                    <div class="third-day">Thursday_???</div>
-                    <div class="third-day-grad">8</div>
-                    <div class="third-day-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
+                    <p>ПОСЛЕПОСЛЕ-ЗАВТРА:</p>
+
+                    <div class="day-4">Thursday_???</div>
+
+                    <p class="temp-day-4__temp"></p>
+
                 </div>
                 
             </div><!-- /weather-three-days-->
@@ -197,10 +190,12 @@
                     <p>
                         <span>Latitude: </span>
                         <span class="geo-point__latitude"></span>
+                        <span>&deg;</span>
                     </p>
                     <p>
                         <span>Longitude: </span>
                         <span class="geo-point__longitude"></span>
+                        <span>&deg;</span>
                     </p>
 
                 </div>
@@ -301,6 +296,7 @@
 
 </script>
 
+<!-- <script src="./js/arr-weather-icons.js"></script> -->
 
 <script src="./js/index.js"></script>
 

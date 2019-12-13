@@ -37,7 +37,7 @@ header
   header
     padding-left: 16px
     padding-right: 16px
-    background-color: red
+    // background-color: red
 
 
 // ________________
@@ -53,7 +53,7 @@ header
   border-radius: 5px
   outline: 0
   background-color: rgba(174,181,185,.5)
-  background-image: url("../src/assets/img/refresh-bg.svg")
+  // background-image: url("../assets/img/refresh-bg.svg")
   background-repeat: no-repeat
   background-position: center 5px
   box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
@@ -159,7 +159,7 @@ header
   border-top-left-radius: 5px
   border-bottom-left-radius: 5px
   outline-color: rgba(174,181,185,.5)
-  background: rgba(76,82,85,.4) url(../src/assets/img/microphone.svg) no-repeat
+  background: rgba(76,82,85,.4) url(../assets/img/microphone.svg) no-repeat
   background-position-x: 345px
   background-position-y: center
 
@@ -167,8 +167,19 @@ header
   .header-search input
     width: 350px
     background-position-x: 320px
-    background-color: green
+    // background-color: green
 
+@media screen and (max-width: 730px)
+  .header-search input
+    width: 320px
+    background-position-x: 280px
+    // background-color: blue
+
+@media screen and (max-width: 700px)
+  .header-search input
+    width: 320px
+    background-position-x: 280px
+    // background-color: brown
 
 .header-search input::placeholder
   opacity: 1
@@ -208,65 +219,65 @@ header
 
 // _________________________________________________________
 
-.header_left
-    display: flex
-    flex-basis: 65%
-
-.header-right
-    flex-basis: 35%
-
 
 .sec-app
-    display: flex
+  display: flex
+  padding-left: 10px
+  padding-right: 10px
 
 main
-    flex-basis: 65%
-    // background-color: green
-    background-color: rgba(0, 50, 0, 0.55)
+  flex-basis: 65%
+  // background-color: rgba(0, 50, 0, 0.55)
 
 // ____________________
 
 .geo__city
-    font-size: 74px
-    color: #FFF
-    font-weight: bold
+  font-size: 70px
+  color: #FFF
+  font-weight: bold
 
 .geo__country
-    font-size: 34px
-    color: red
-    font-weight: bold
+  font-size: 44px
+  color: red
+  font-weight: bold
 
 .geo__date
-    font-size: 33px
-    color: red
+  font-size: 33px
+  color: red
+  
+.geo__time
+  font-size: 33px
+  color: yellow
 
 // ____________________
 
 .temp-today
-    display: flex
+  display: flex
+  // justify-content: space-between
+  justify-content: flex-start
 
 .temp-today__temp
-    font-size: 280px
+    font-size: 220px
     line-height: 0.8
     color: #FFF
     font-weight: bold
-    background-color: rgba(190, 106, 10, 0.644)
+    // background-color: rgba(190, 106, 10, 0.644)
 
 
 .temp-today__weather
     display: flex
     padding: 12px
-    background-color: rgba(8, 109, 134, 0.55)
+    // background-color: rgba(8, 109, 134, 0.55)
 
 
 .temp-today__weather-icon
-    background-color: blue
-    margin-top: -63px
-    padding: 3px
+  margin-top: -63px
+  padding: 3px
+  // background-color: blue
 
 // ___ СТИЛЬ - ТЕХНОЛОГИЧЕСКИЙ ____
 .temp-today__weather-wrap
-    background-color: rgba(143, 32, 124, 0.836)
+    // background-color: rgba(143, 32, 124, 0.836)
     margin-top: 70px
     margin-left: -30px
     padding: 3px
@@ -293,6 +304,11 @@ main
 
 // _________________
 
+.geo-point
+    padding-top: 10px
+    p
+        text-align: right
+        padding-right: 12px
 
 
 .geo-point__latitude,
@@ -302,7 +318,9 @@ main
 
 .weather-three-days
     display: flex
-    background-color: rgba(0, 0, 0, 0.5)
+    justify-content: space-between
+    padding-bottom: 200px
+    // background-color: rgba(0, 0, 0, 0.5)
 
 .weather-three-days-item
     padding-right: 30px
@@ -318,9 +336,8 @@ main
     text-transform: uppercase
 
 .temp-day-2__temp,
-.first-day-grad,
-.second-day-grad,
-.third-day-grad
+.temp-day-3__temp,
+.temp-day-4__temp
     color: #FFF
     font-style: normal
     font-weight: 600
@@ -328,19 +345,20 @@ main
     line-height: 98px
     text-transform: uppercase
 
+// =========== RIGHT BLOCK ==============
+
 aside
-    flex-basis: 35%
-    // background-color: blue
-    background-color: rgba(0, 0, 50, 0.65)
+  flex-basis: 35%
+  // background-color: rgba(0, 0, 50, 0.65)
 
 .geolocation
-    // align-items: center
+  // align-items: center
 
 .geolocation-map
-    img
-        border-radius: 20px
+  img
+    border-radius: 20px
 
 .geolocation-point
-    text-align: right
-    color: #FFF
-    font-size: 20px
+  text-align: right
+  color: #FFF
+  font-size: 20px

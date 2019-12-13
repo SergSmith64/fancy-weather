@@ -1,4 +1,3 @@
-//
 console.log("получаю погоду с OpenWeatherMap");
 
 // ___ ОТКУДА ВЗЯЛСЯ ПРОКСИ ?!!! ____
@@ -22,6 +21,7 @@ var proxyUrl  = 'https://cors-anywhere.herokuapp.com/'
 //     document.querySelector('.geo__date').innerHTML = data.dt_txt;
 
 //     document.querySelector('.temp-today__temp').innerHTML = Math.round(data.main.temp - 263) + '&deg';
+//     document.querySelector('.temp-today__temp').innerHTML = Math.round(data.main.temp - 263);
 
 //     document.querySelector('.temp-today__weather-description').textContent = data.weather[0]['description'];
 
@@ -67,27 +67,31 @@ console.log(detectLongitude);
 
 var targetUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.5265&lon=46.0435&appid=084a72f7662b746a323538af696e70cb'
 
-// fetch(proxyUrl + targetUrl)
-//   .then(function (rest) { return rest.json() })
-//   .then(function (data) {
-//     console.log(data);
-//     document.querySelector('.geo__city').textContent = data.city.name;
-//     document.querySelector('.geo__country').textContent = data.city.country;
-//     document.querySelector('.geo__date').textContent = data.list[0]['clouds']['dt_txt'];
+fetch(proxyUrl + targetUrl)
+  .then(function (rest) { return rest.json() })
+  .then(function (data) {
+    console.log(data);
+    document.querySelector('.geo__city').textContent = data.city.name;
+    document.querySelector('.geo__country').textContent = data.city.country;
+    document.querySelector('.geo__date').textContent = data.list[0]['clouds']['dt_txt'];
 
-//     document.querySelector('.temp-today__temp').innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
+    document.querySelector('.temp-today__temp').innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
 
-//     document.querySelector('.temp-today__weather-description').innerHTML = data.list[0].weather[0].description;
+    document.querySelector('.temp-today__weather-description').innerHTML = data.list[0].weather[0].description;
     
-//     document.querySelector('.temp-today__weather-wind').innerHTML = data.list[0].wind.speed;
-//     document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
-//     document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
+    document.querySelector('.temp-today__weather-wind').innerHTML = data.list[0].wind.speed;
+    document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
+    document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
 
-//     document.querySelector('.geo-point__latitude').innerHTML = data.city.coord.lat;
-//     document.querySelector('.geo-point__longitude').innerHTML = data.city.coord.lon;
+    document.querySelector('.geo-point__latitude').innerHTML = data.city.coord.lat;
+    document.querySelector('.geo-point__longitude').innerHTML = data.city.coord.lon;
 
-//     document.querySelector('.temp-day-2__temp').innerHTML = Math.round(data.list[8].main.temp - 273) + '&deg';
-//   })
-//   .catch(function() {
-//     console.log("Fetch Error = ...........");
-//   });
+    document.querySelector('.temp-day-2__temp').innerHTML = Math.round(data.list[8].main.temp - 273) + '&deg';
+
+    document.querySelector('.temp-day-3__temp').innerHTML = Math.round(data.list[16].main.temp - 273) + '&deg';
+
+    document.querySelector('.temp-day-4__temp').innerHTML = Math.round(data.list[24].main.temp - 273) + '&deg';
+  })
+  .catch(function() {
+    console.log("Fetch Error = ...........");
+  });
