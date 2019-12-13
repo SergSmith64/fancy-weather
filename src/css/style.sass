@@ -1,16 +1,23 @@
+*
+    margin: 0
+    padding: 0
+
 body
     font-size: 18px
     min-width: 320px
     color: #FFF
-    // font-family: 'Roboto', sans-serif
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Roboto', sans-serif
+    // font-family: 'Montserrat', sans-serif
     // background: url(../assets/img/bg-3.jpg) no-repeat center top
-    // background: url(../assets/img/bg-3.jpg) no-repeat center center
-    background: linear-gradient(180deg,rgba(8,15,26,.59) 0,rgba(17,17,46,.46) 100%),url(../assets/img/bg-3.jpg) no-repeat center center
+    background: linear-gradient(180deg,rgba(8,15,26,.59) 0,rgba(17,17,46,.46) 100%),
+    url(../assets/img/bg-3.jpg) no-repeat center center
     background-size: cover
+    // box-shadow: inset 0px 0px 185px rgba(0,0,0,0.4)
     // height: 100vh
 
-
+p
+    margin: 0
+    padding: 0
 
 .container
     display: flex
@@ -18,12 +25,188 @@ body
     // align-items: center
     max-width: 1024px
     margin: 0 auto
-    padding-top: 50px
-    padding-left: 50px
-    padding-right: 50px
 
-.header
+
+header
+  display: flex
+  padding-top: 40px
+  padding-bottom: 60px
+  justify-content: space-between
+
+@media screen and (max-width: 1084px)
+  header
+    padding-left: 16px
+    padding-right: 16px
+    background-color: red
+
+
+// ________________
+
+.header-tools
+  display: flex
+
+.header-tools__refresh
+  width: 44px
+  height: 44px
+  margin-right: 10px
+  border: none
+  border-radius: 5px
+  outline: 0
+  background-color: rgba(174,181,185,.5)
+  background-image: url("../src/assets/img/refresh-bg.svg")
+  background-repeat: no-repeat
+  background-position: center 5px
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
+
+.header-tools__refresh:hover
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+
+.header-tools__refresh img
+  margin-top: 5px
+  animation-name: rotation
+  animation-duration: 2s
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+
+
+@-webkit-keyframes rotation
+  0%
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+@keyframes rotation
+  0%
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+.header-tools__lang
+  display: flex
+  width: 71px
+  height: 44px
+  margin-right: 10px
+  padding-left: 23px
+  color: #FFF
+  border: none
+  border-radius: 6px
+  outline: 0
+  background: rgba(174,181,185,.5)
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
+  justify-content: center
+  align-items: center
+  &:hover
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+  
+
+
+.control_button__metric
+  display: flex
+  width: 44px
+  height: 44px
+  input
+    position: absolute
+    left: -9999px
+    width: 44px
+    align-items: center
+  input:checked + label
+    background: rgba(76,82,85,.4)
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
+  label
     display: flex
+    width: 44px
+    height: 44px
+    cursor: pointer
+    background: rgba(174,181,185,.5)
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
+    justify-content: center
+    align-items: center
+  div
+    color: #FFF
+  div:first-child label
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+    &:hover
+      box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+  div:last-child label
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    &:hover
+      box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+
+
+
+// ________________
+
+.header-search
+  display: flex
+  justify-content: flex-end
+
+.header-search input
+  position: relative
+  box-sizing: border-box
+  width: 375px
+  height: 44px
+  padding: 13px 58px 13px 15px
+  color: #FFF
+  border: 1px solid rgba(228,227,227,.2)
+  border-top-left-radius: 5px
+  border-bottom-left-radius: 5px
+  outline-color: rgba(174,181,185,.5)
+  background: rgba(76,82,85,.4) url(../src/assets/img/microphone.svg) no-repeat
+  background-position-x: 345px
+  background-position-y: center
+
+@media screen and (max-width: 780px)
+  .header-search input
+    width: 350px
+    background-position-x: 320px
+    background-color: green
+
+
+.header-search input::placeholder
+  opacity: 1
+  transition: opacity .3s
+  color: rgba(228,227,227,.8)
+
+.header-search button
+  font-size: 14px
+  font-weight: 400
+  font-style: normal
+  line-height: 17px
+  display: flex
+  width: 101px
+  height: 44px
+  text-transform: uppercase
+  color: #FFF
+  border: none
+  border-top-right-radius: 5px
+  border-bottom-right-radius: 5px
+  outline: 0
+  background-color: rgba(174,181,185,.5)
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
+  align-items: center
+  justify-content: center
+  font-feature-settings: 'cpsp' on
+
+.header-search button:hover
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+
+
+.header-search input:focus
+  height: 42px
+  margin-top: 1px
+
+.header-search input:focus::placeholder
+  opacity: 1
+
+// _________________________________________________________
 
 .header_left
     display: flex
@@ -32,8 +215,6 @@ body
 .header-right
     flex-basis: 35%
 
-.form-search
-    display: flex
 
 .sec-app
     display: flex
@@ -43,13 +224,7 @@ main
     // background-color: green
     background-color: rgba(0, 50, 0, 0.55)
 
-
-
-.weather-today
-    background-color: rgba(90, 0, 0, 0.45)
-    margin-bottom: 25px
-
-
+// ____________________
 
 .geo__city
     font-size: 74px
@@ -65,30 +240,60 @@ main
     font-size: 33px
     color: red
 
+// ____________________
+
+.temp-today
+    display: flex
+
 .temp-today__temp
-    font-size: 200px
+    font-size: 280px
     line-height: 0.8
     color: #FFF
     font-weight: bold
+    background-color: rgba(190, 106, 10, 0.644)
 
-.weather-today__description
+
+.temp-today__weather
+    display: flex
+    padding: 12px
+    background-color: rgba(8, 109, 134, 0.55)
+
+
+.temp-today__weather-icon
+    background-color: blue
+    margin-top: -63px
+    padding: 3px
+
+// ___ СТИЛЬ - ТЕХНОЛОГИЧЕСКИЙ ____
+.temp-today__weather-wrap
+    background-color: rgba(143, 32, 124, 0.836)
+    margin-top: 70px
+    margin-left: -30px
+    padding: 3px
+
+.temp-today__weather-description
     font-size: 22px
     color: yellow
     font-weight: bold
 
-.weather-today__name
+.temp-today__weather-wind
     font-size: 33px
     color: lightgreen
 
-.weather-today__humidity
+.temp-today__weather-humidity
     font-size: 22px
     color: red
     font-weight: bold
 
-.weather-today__pressure
+.temp-today__weather-pressure
     font-size: 22px
     color: green
     font-weight: bold
+
+
+// _________________
+
+
 
 .geo-point__latitude,
 .geo-point__longitude

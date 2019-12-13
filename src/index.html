@@ -27,8 +27,17 @@
 
     <header>
 <!-- ____ЛЕВЫЙ БЛОК____ -->
-        <div class="tools">
-            <input type="button" class="tools__image btn btn-dark" value="Load">
+        <div class="header-tools">
+            <button class="header-tools__refresh">
+                <img src="../src/assets/img/vector.svg" alt="button">
+            </button>
+            <select class="header-tools__lang" name="" id="input0" reguired>
+                <option class="header-tools__lang-ru" value="ru">RU</option>
+                <option class="header-tools__lang-en" value="en">EN</option>
+            </select>
+
+
+            <!-- <input type="button" class="tools__image btn btn-dark" value="Load">
             <div class="dropdown tools__language">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"></button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -36,16 +45,35 @@
                     <a class="dropdown-item" href="#">RU</a>
                     <a class="dropdown-item" href="#">BE</a>
                 </div>
-            </div><!-- /dropdown -->
-            <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
+            </div> -->
+            <!-- /dropdown -->
+
+
+            <div class="control_button__metric">
+                <div>
+                    <input type="radio" name="option" id="radio1" checked />
+                    <label for="radio1">°F</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="radio2" />
+                    <label for="radio2">°С</label>
+                </div>
+            </div>
+            <!-- <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
                 <label class="btn btn-secondary active">
                     <input type="radio" name="options" id="option1" autocomplete="off" checked> C
                 </label>
                 <label class="btn btn-secondary">
                     <input type="radio" name="options" id="option2" autocomplete="off" checked> F
                 </label>
-            </div>
+            </div> -->
         </div>
+
+
+
+
+
+
 
 <!-- ____ПРАВЫЙ БЛОК____ -->
         <div class="search">
@@ -58,32 +86,8 @@
         </div>
     </header>
 
-    <!-- <div class="header">
-        <div class="header_left">
-            <div class="change-back">FFFFFFFF</div>
-            <div class="change-lang">LLLLLLLLL</div>
-            <div class="change-metric">QQQQQQQQQ</div>
-        </div>
-        <div class="header-right">
-            <div class="form-search">
-                <div class="form-search__field">KKKKKKKKK</div>
-                <button class="form-submit">MMMMMMMMMM</button>
-            </div>
-        </div>
-    </div> -->
 
 
-
-    <!-- <main class="wrapper">
-        <section class="today-wrapper">
-            <div class="today-info">
-                <p class="today-info__city">Minsk, Belarus</p>
-                <p class="today-info__date">Mon 28 October</p>
-                <p class="today-info__time">17:28</p>
-            </div>
-            <div class="today-main"></div>
-        </section>
-    </main> -->
 
 
 
@@ -100,39 +104,51 @@
                     <p class="geo__date"> __Fri 29 Nov _???_ </p>
                     <p class="geo__time"> __17:45 _???_</p>
                 </div>
+
                 <div class="temp-today">
-                    <p class="temp-today__temp"> _10_град</p>
-                    <div class="temp-today__pic">ИКОНКА-ПОГОДЫ</div>
+    <!-- ____________ -->
+                    <p class="temp-today__temp">10&deg;</p>
+    <!-- ____________ -->
+                    <div class="temp-today__weather">
+                        <div class="temp-today__weather-icon">
+                            <img src="./assets/img/weather/rain_&_snow.png" alt="ИКОНКА-ПОГОДЫ">
+                        </div>
+                        <div class="temp-today__weather-wrap">
+                            <p>
+                                <!-- <span>СЕГОДНЯ :</span> -->
+                                <span></span>
+                                <span class="temp-today__weather-description"></span>
+                            </p>
+                                        
+                            <p>
+                                <span>FEELS LIKE:</span>
+                                <span class="temp-today__weather-feels"></span>
+                                <span>&deg;</span>
+                            </p>
+                
+                            <p>
+                                <span>Ветер</span>
+                                <span class="temp-today__weather-wind"></span>
+                                <span> м/сек</span>
+                            </p>
+                                        
+                            <p>
+                                <span>Влажность: </span>
+                                <span class="temp-today__weather-humidity"></span>
+                                <span> %</span>
+                            </p>
+                
+                            <!-- ___ дополнительно__можно__получить:  ___ -->
+                            <p>
+                                <span>Давление: </span>
+                                <span class="temp-today__weather-pressure"></span>
+                                <span> hPa</span>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="weather-today">
-                    <p>
-                        <span>СЕГОДНЯ </span>
-                        <span class="weather-today__description"></span>
-                    </p>
 
-                    <p class="weather-today__feels"> _Ощущения _???_</p>
-
-                    <p>
-                        <span>Ветер</span>
-                        <span class="weather-today__wind"></span>
-                        <span>м/сек</span>
-                    </p>
-                    
-                    <p>
-                        <span>Влажность: </span>
-                        <span class="weather-today__humidity"></span>
-                        <span>%</span>
-                    </p>
-
-                    <!-- ___ дополнительно__ДАВЛЕНИЕ ___ -->
-                    <p>
-                        <span>Давление: </span>
-                        <span class="weather-today__pressure"></span>
-                        <span> hPa</span>
-                    </p>
-
-                    
-                </div>
 
             </div>
 

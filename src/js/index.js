@@ -23,11 +23,13 @@ var proxyUrl  = 'https://cors-anywhere.herokuapp.com/'
 
 //     document.querySelector('.temp-today__temp').innerHTML = Math.round(data.main.temp - 263) + '&deg';
 
-//     document.querySelector('.weather-today__description').textContent = data.weather[0]['description'];
+//     document.querySelector('.temp-today__weather-description').textContent = data.weather[0]['description'];
+
 //     document.querySelector('.weather-today__name').innerHTML = data.weather.main;
-//     document.querySelector('.weather-today__wind').innerHTML = data.wind.speed;
-//     document.querySelector('.weather-today__humidity').innerHTML = data.main['humidity'];
-//     document.querySelector('.weather-today__pressure').innerHTML = data.main.pressure;
+
+//     document.querySelector('.temp-today__weather-wind').innerHTML = data.wind.speed;
+//     document.querySelector('.temp-today__weather-humidity').innerHTML = data.main['humidity'];
+//     document.querySelector('.temp-today__weather-pressure').innerHTML = data.main.pressure;
 
 //     document.querySelector('.geo-point__latitude').innerHTML = data.coord.lat;
 //     document.querySelector('.geo-point__longitude').innerHTML = data.coord.lon;
@@ -75,11 +77,11 @@ var targetUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.5265&lo
 
 //     document.querySelector('.temp-today__temp').innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
 
-//     document.querySelector('.weather-today__description').innerHTML = data.list[0].weather[0].description;
+//     document.querySelector('.temp-today__weather-description').innerHTML = data.list[0].weather[0].description;
     
-//     document.querySelector('.weather-today__wind').innerHTML = data.list[0].wind.speed;
-//     document.querySelector('.weather-today__humidity').innerHTML = data.list[0].main.humidity;
-//     document.querySelector('.weather-today__pressure').innerHTML = data.list[0].main.pressure;
+//     document.querySelector('.temp-today__weather-wind').innerHTML = data.list[0].wind.speed;
+//     document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
+//     document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
 
 //     document.querySelector('.geo-point__latitude').innerHTML = data.city.coord.lat;
 //     document.querySelector('.geo-point__longitude').innerHTML = data.city.coord.lon;
