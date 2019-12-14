@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Users_UUU</title>
+</head>
+<body>
+
+
+    <script>
+        function users()
+    {
+        var userfio = document.getElementById("fio");
+          console.log("ВНУТРИ ФУНКЦИИ ВИЖУ___", (userfio.value));
+    }
+    </script>
+  
+<!-- ______ далее: ЭТО HTML  _____________ -->
+     
+      <table border = "2">
+        <tr>
+          <td>
+              <FORM>
+                <!-- <INPUT NAME="username" VALUE ="" SIZE="40" MAXLEGNTH=40 id="fio"> -->
+
+      <!-- _____ВСЯ СТРОКА НИЖЕ ПОПАДЕТ В ПЕРЕМЕННУЮ __userfio__ _______ -->
+                <INPUT NAME="username" id="fio">
+              </FORM>
+          </td>
+        </tr>
+      </table><br><br>
+     
+    <div id="userfio"></div>
+
+    <!-- <div onclick="users();">Клик</div> -->
+
+    <div onclick="users();">
+      <button style="width: 40px; height: 25px; background-color: pink;">Клик</button>
+    </div>
+
+
+
+</body>
+</html>

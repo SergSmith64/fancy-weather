@@ -372,6 +372,7 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 60px;
 }
 
 .temp-today__temp {
@@ -443,22 +444,20 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 200px;
+  padding-top: 30px;
+  padding-bottom: 130px;
 }
 
 .weather-three-days-item {
   padding-right: 30px;
 }
 
-.first-day,
-.second-day,
-.third-day {
+.day-2,
+.day-3,
+.day-4 {
   color: #FFF;
-  font-style: normal;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 27px;
-  text-transform: uppercase;
 }
 
 .temp-day-2__temp,
@@ -470,6 +469,15 @@ main {
   font-size: 80px;
   line-height: 98px;
   text-transform: uppercase;
+}
+
+.temp-day-2__weather-description,
+.temp-day-3__weather-description,
+.temp-day-4__weather-description {
+  color: #FFF;
+  font-style: normal;
+  font-style: 24px;
+  font-weight: bold;
 }
 
 aside {

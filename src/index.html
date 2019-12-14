@@ -72,12 +72,20 @@
 
 
 
-
+<!-- <script>
+    function inputYourCity() {
+        var town = document.getElementById("yourCity");
+        console.log("ВНУТРИ ФУНКЦИИ ВИЖУ___", (town.value));
+    }
+</script> -->
 
 <!-- ____ПРАВЫЙ БЛОК____ -->
         <div class="header-search">
-            <input type="text" placeholder="Search city or ZIP" />
-            <button>search</button>
+            <input type="text" placeholder="Search city" id="yourCity"/>
+            <!-- <INPUT NAME="username" VALUE ="" SIZE="40" MAXLEGNTH=40 id="fio"> -->
+            <div onclick="inputYourCity();">
+                <button>search</button>
+            </div>
         </div>
     </header>
 
@@ -117,7 +125,7 @@
                             <p>
                                 <span>FEELS LIKE:</span>
                                 <span class="temp-today__weather-feels"></span>
-                                <span>&deg;</span>
+                                <!-- <span>&deg;</span> -->
                             </p>
                 
                             <p>
@@ -154,7 +162,8 @@
                     <p>ЗАВТРА:</p>
                     <div class="day-2">Tuesday_</div>
 
-                    <p class="temp-day-2__temp"></p>
+                    <div class="temp-day-2__temp">33</div>
+                    <div class="temp-day-2__weather-description">Снег</div>
 
 
                 </div>
@@ -164,17 +173,19 @@
 
                     <div class="day-3">Wednesday_</div>
 
-                    <p class="temp-day-3__temp"></p>
+                    <div class="temp-day-3__temp">35</div>
+                    <div class="temp-day-3__weather-description">Град</div>
 
 
                 </div>
 <!-- ____________ -->
                 <div class="weather-three-days-item">
-                    <p>ПОСЛЕПОСЛЕ-ЗАВТРА:</p>
+                    <p>ПОСЛЕПОСЛЕЗАВТРА:</p>
 
                     <div class="day-4">Thursday_???</div>
 
-                    <p class="temp-day-4__temp"></p>
+                    <div class="temp-day-4__temp">37</div>
+                    <div class="temp-day-4__weather-description">Лед</div>
 
                 </div>
                 
@@ -296,9 +307,13 @@
 
 </script>
 
+<!-- <img src="./assets/img/weather/rain_&_snow.png" alt=""> -->
+
 <!-- <script src="./js/arr-weather-icons.js"></script> -->
 
 <script src="./js/index.js"></script>
+
+<!-- <script src="./js/find-your-city.js"></script> -->
 
 </body>
 </html>
