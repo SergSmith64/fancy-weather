@@ -1,3 +1,5 @@
+// _______ РАБОТАЕТ _______
+
 function inputYourCity() {
   var town = document.getElementById("yourCity");
   console.log("ВНУТРИ ФУНКЦИИ ВИЖУ___", (town.value));

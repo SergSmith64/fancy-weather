@@ -28,6 +28,8 @@ p {
           flex-direction: column;
   max-width: 1024px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 header {
@@ -39,13 +41,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media screen and (max-width: 1084px) {
-  header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 .header-tools {
@@ -369,35 +364,40 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 60px;
 }
 
+.temp-today__temp-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .temp-today__temp {
-  font-size: 220px;
+  font-size: 160px;
   line-height: 0.8;
   color: #FFF;
   font-weight: bold;
+}
+
+.temp-today__icon {
+  margin-top: -15px;
 }
 
 .temp-today__weather {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 12px;
-}
-
-.temp-today__weather-icon {
-  margin-top: -63px;
-  padding: 3px;
 }
 
 .temp-today__weather-wrap {
-  margin-top: 70px;
-  margin-left: -30px;
-  padding: 3px;
+  margin-top: 57px;
+  margin-left: 3px;
 }
 
 .temp-today__weather-description {
@@ -483,6 +483,9 @@ main {
 aside {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .geolocation-map img {
