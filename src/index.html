@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fancy Weather</title>
-    <link rel="shortcut icon" href="../src/assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fancy Weather</title>
+        <link rel="shortcut icon" href="../src/assets/img/favicon.ico"
+            type="image/x-icon">
+        <link rel="stylesheet" href="./css/normalize.css">
 
-    <!-- ________________ Bootstrap-4-CSS _________________ -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
+        <!-- ________________ Bootstrap-4-CSS _________________ -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap"
+            rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <!-- ____ TASK - URL ____ https://github.com/rolling-scopes-school/tasks/blob/master/tasks/fancy-weather.md ____ -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- ____ TASK - URL ____ https://github.com/rolling-scopes-school/tasks/blob/master/tasks/fancy-weather.md ____ -->
+        <!-- ____ DEMO: ____ https://sergsmith64.github.io/fancy-weather/src/index.html _______ -->
+        <div class="container">
 
-    <!-- ____ DEMO: ____ https://sergsmith64.github.io/fancy-weather/src/index.html _______ -->
-
-
-<div class="container">
-
-    <header>
-<!-- ____ЛЕВЫЙ БЛОК____ -->
-        <div class="header-tools">
-            <button class="header-tools__refresh">
-                <img src="../src/assets/img/vector.svg" alt="button">
-            </button>
-            <select class="header-tools__lang" name="" id="input0" reguired>
-                <option class="header-tools__lang-ru" value="ru">RU</option>
-                <option class="header-tools__lang-en" value="en">EN</option>
-            </select>
+            <header>
+                <!-- ____ЛЕВЫЙ БЛОК____ -->
+                <div class="header-tools">
+                    <button class="header-tools__refresh">
+                        <img src="../src/assets/img/vector.svg" alt="button">
+                    </button>
+                    <select class="header-tools__lang" name="" id="input0"
+                        reguired>
+                        <option class="header-tools__lang-ru" value="ru">RU</option>
+                        <option class="header-tools__lang-en" value="en">EN</option>
+                    </select>
 
 
-            <!-- <input type="button" class="tools__image btn btn-dark" value="Load">
+                    <!-- <input type="button" class="tools__image btn btn-dark" value="Load">
             <div class="dropdown tools__language">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"></button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -46,20 +47,21 @@
                     <a class="dropdown-item" href="#">BE</a>
                 </div>
             </div> -->
-            <!-- /dropdown -->
+                    <!-- /dropdown -->
 
 
-            <div class="control_button__metric">
-                <div>
-                    <input type="radio" name="option" id="radio1" checked />
-                    <label for="radio1">°С</label>
-                </div>
-                <div>
-                    <input type="radio" name="option" id="radio2" />
-                    <label for="radio2">°F</label>
-                </div>
-            </div>
-            <!-- <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
+                    <div class="control_button__metric">
+                        <div>
+                            <input type="radio" name="option" id="radio1"
+                                checked />
+                            <label for="radio1">°С</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="option" id="radio2" />
+                            <label for="radio2">°F</label>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-group btn-group-toggle tools__temperature" data-toggle="buttons">
                 <label class="btn btn-secondary active">
                     <input type="radio" name="options" id="option1" autocomplete="off" checked> C
                 </label>
@@ -67,150 +69,156 @@
                     <input type="radio" name="options" id="option2" autocomplete="off" checked> F
                 </label>
             </div> -->
-        </div>
+                </div>
 
 
 
 
-<!-- <script>
+                <!-- <script>
     function inputYourCity() {
         var town = document.getElementById("yourCity");
         console.log("ВНУТРИ ФУНКЦИИ ВИЖУ___", (town.value));
     }
 </script> -->
+                <!-- ____ПРАВЫЙ БЛОК____ -->
+                <div class="header-search">
+                    <input type="text" placeholder="Search city" id="yourCity"
+                        />
+                    <!-- <INPUT NAME="username" VALUE ="" SIZE="40" MAXLEGNTH=40 id="fio"> -->
+                    <div onclick="inputYourCity();">
+                        <button>search</button>
+                    </div>
+                </div>
+            </header>
 
-<!-- ____ПРАВЫЙ БЛОК____ -->
-        <div class="header-search">
-            <input type="text" placeholder="Search city" id="yourCity"/>
-            <!-- <INPUT NAME="username" VALUE ="" SIZE="40" MAXLEGNTH=40 id="fio"> -->
-            <div onclick="inputYourCity();">
-                <button>search</button>
-            </div>
+
+
+            <section class="sec-app">
+
+                <main>
+                    <div class="weather-today">
+                        <div class="geo">
+                            <p>
+                                <span class="geo__city">Saratov</span>
+                                <span class="geo__country">RU</span>
+                            </p>
+
+                            <p>
+                                <span class="geo__date">Fri 29 Nov</span>
+                                <span class="geo__time">17:45</span>
+                            </p>
+                        </div>
+
+                        <div class="temp-today">
+                            <!-- ____________ -->
+                            <div class="temp-today__temp-wrapper">
+                                <p class="temp-today__temp">10&deg;</p>
+                                <div class="temp-today__icon">
+                                    <img
+                                        src="./assets/img/weather/rain_&_snow.png"
+                                        alt="ИКОНКА-ПОГОДЫ">
+                                </div>
+                            </div>
+                            <!-- ____________ -->
+                            <div class="temp-today__weather">
+
+                                <div class="temp-today__weather-wrap">
+                                    <p>
+                                        <span
+                                            class="temp-today__weather-description">_Облака_</span>
+                                    </p>
+
+                                    <p>
+                                        <span>FEELS LIKE:</span>
+                                        <span class="temp-today__weather-feels">_по_ощущениям_</span>
+                                        <!-- <span>&deg;</span> -->
+                                    </p>
+
+                                    <p>
+                                        <span>Ветер</span>
+                                        <span class="temp-today__weather-wind">100,55</span>
+                                        <span> м/сек</span>
+                                    </p>
+
+                                    <p>
+                                        <span>Влажность: </span>
+                                        <span
+                                            class="temp-today__weather-humidity">100,55</span>
+                                        <span> %</span>
+                                    </p>
+
+                                    <!-- ___ дополнительно__можно__получить:  ___ -->
+                                    <p>
+                                        <span>Давление: </span>
+                                        <span
+                                            class="temp-today__weather-pressure">100,55</span>
+                                        <span> hPa</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- ________ ПОГОДА НА ТРИ ДНЯ _________ -->
+
+                    <div class="weather-three-days">
+
+                        <div class="weather-three-days-item">
+                            <div class="day-2">Sunday_</div>
+                            <div class="temp-day-2__temp">43</div>
+                            <div class="temp-day-2__weather-description">Снег</div>
+                        </div>
+                        <!-- ____________ -->
+                        <div class="weather-three-days-item">
+                            <div class="day-3">Monday_</div>
+                            <div class="temp-day-3__temp">45</div>
+                            <div class="temp-day-3__weather-description">Град</div>
+                        </div>
+                        <!-- ____________ -->
+                        <div class="weather-three-days-item">
+                            <div class="day-4">Tuesday_</div>
+                            <div class="temp-day-4__temp">47</div>
+                            <div class="temp-day-4__weather-description">Лед</div>
+                        </div>
+
+                    </div><!-- /weather-three-days-->
+                </main><!-- /main-->
+
+                <aside>
+                    <div class="geolocation">
+                        <div class="geolocation-map">
+                            <img src="./assets/img/map-saratov-325x325.jpg"
+                                alt="map">
+                        </div>
+                        <div class="geo-point">
+                            <p>
+                                <span>Latitude: </span>
+                                <span class="geo-point__latitude">55.555555</span>
+                                <span>&deg;</span>
+                            </p>
+                            <p>
+                                <span>Longitude: </span>
+                                <span class="geo-point__longitude">55.555555</span>
+                                <span>&deg;</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </aside>
+
+            </section>
+
+
+
+
         </div>
-    </header>
 
 
 
-    <section class="sec-app">
-
-        <main>
-            <div class="weather-today">
-                <div class="geo">
-                    <p>
-                        <span class="geo__city">Saratov</span>
-                        <span class="geo__country">RU</span>
-                    </p>
-
-                    <p>
-                        <span class="geo__date">Fri 29 Nov</span>
-                        <span class="geo__time">17:45</span>
-                    </p>
-                </div>
-
-                <div class="temp-today">
-    <!-- ____________ -->
-                    <div class="temp-today__temp-wrapper">
-                        <p class="temp-today__temp">10&deg;</p>
-                        <div class="temp-today__icon">
-                            <img src="./assets/img/weather/rain_&_snow.png" alt="ИКОНКА-ПОГОДЫ">
-                        </div>
-                    </div>
-    <!-- ____________ -->
-                    <div class="temp-today__weather">
-                        
-                        <div class="temp-today__weather-wrap">
-                            <p>
-                                <span class="temp-today__weather-description">_Облака_</span>
-                            </p>
-                                        
-                            <p>
-                                <span>FEELS LIKE:</span>
-                                <span class="temp-today__weather-feels">_по_ощущениям_</span>
-                                <!-- <span>&deg;</span> -->
-                            </p>
-                
-                            <p>
-                                <span>Ветер</span>
-                                <span class="temp-today__weather-wind">100,55</span>
-                                <span> м/сек</span>
-                            </p>
-                                        
-                            <p>
-                                <span>Влажность: </span>
-                                <span class="temp-today__weather-humidity">100,55</span>
-                                <span> %</span>
-                            </p>
-                
-                            <!-- ___ дополнительно__можно__получить:  ___ -->
-                            <p>
-                                <span>Давление: </span>
-                                <span class="temp-today__weather-pressure">100,55</span>
-                                <span> hPa</span>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-<!-- ________ ПОГОДА НА ТРИ ДНЯ _________ -->
-
-            <div class="weather-three-days">
-
-                <div class="weather-three-days-item">
-                    <div class="day-2">Sunday_</div>
-                    <div class="temp-day-2__temp">43</div>
-                    <div class="temp-day-2__weather-description">Снег</div>
-                </div>
-<!-- ____________ -->                
-                <div class="weather-three-days-item">
-                    <div class="day-3">Monday_</div>
-                    <div class="temp-day-3__temp">45</div>
-                    <div class="temp-day-3__weather-description">Град</div>
-                </div>
-<!-- ____________ -->
-                <div class="weather-three-days-item">
-                    <div class="day-4">Tuesday_</div>
-                    <div class="temp-day-4__temp">47</div>
-                    <div class="temp-day-4__weather-description">Лед</div>
-                </div>
-                
-            </div><!-- /weather-three-days-->
-        </main><!-- /main-->
-
-        <aside>
-            <div class="geolocation">
-                <div class="geolocation-map">
-                    <img src="./assets/img/map-saratov-325x325.jpg" alt="map">
-                </div>
-                <div class="geo-point">
-                    <p>
-                        <span>Latitude: </span>
-                        <span class="geo-point__latitude">55.555555</span>
-                        <span>&deg;</span>
-                    </p>
-                    <p>
-                        <span>Longitude: </span>
-                        <span class="geo-point__longitude">55.555555</span>
-                        <span>&deg;</span>
-                    </p>
-
-                </div>
-            </div>
-        </aside>
-    
-    </section>
-
-
-
-
-</div>
-
-    
-
-<script>
+        <script>
     //  _________________WebForMySelf____________________
 
     // function getCoordinat() {
@@ -295,20 +303,18 @@
 
 
 </script>
-
-
-<!-- <script src="./js/index.js"></script> -->
+        <!-- <script src="./js/index.js"></script> -->
 
 
 
 
-<!-- <img src="./assets/img/weather/rain_&_snow.png" alt=""> -->
+        <!-- <img src="./assets/img/weather/rain_&_snow.png" alt=""> -->
 
-<!-- <script src="./js/arr-weather-icons.js"></script> -->
+        <!-- <script src="./js/arr-weather-icons.js"></script> -->
 
-<!-- <script src="./js/find-your-city.js"></script> -->
+        <!-- <script src="./js/find-your-city.js"></script> -->
 
-<!-- <script src="./js/await-1.js"></script> -->
-
-</body>
+        <!-- <script src="./js/await-1.js"></script> -->
+        <script src="./js/index.js"></script>
+    </body>
 </html>

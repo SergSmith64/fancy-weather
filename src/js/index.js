@@ -79,7 +79,7 @@ function showCoordinat(position) {
         document.querySelector('.geo__date').textContent = data.list[0]['clouds']['dt_txt'];
         document.querySelector('.temp-today__temp').innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
         document.querySelector('.temp-today__weather-description').innerHTML = data.list[0].weather[0].description;
-        document.querySelector('.temp-today__weather-description').innerHTML = Math.round(data.list[0].weather[0].temp-today__weather-feels - 273) + '&deg';
+        document.querySelector('.temp-today__weather-feels').innerHTML = Math.round(data.list[0].main.feels_like - 273) + '&deg';
         document.querySelector('.temp-today__weather-wind').innerHTML = data.list[0].wind.speed;
         document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
         document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
@@ -148,7 +148,7 @@ function inputYourCity() {
         document.querySelector('.geo__date').innerHTML = data.list[0].dt_txt;
         document.querySelector('.temp-today__temp').innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
         document.querySelector('.temp-today__weather-description').innerHTML = data.list[0].weather[0].description;
-        document.querySelector('.temp-today__weather-description').innerHTML = Math.round(data.list[0].weather[0].temp-today__weather-feels - 273) + '&deg';
+        document.querySelector('.temp-today__weather-feels').innerHTML = Math.round(data.list[0].main.feels_like - 273) + '&deg';
         document.querySelector('.temp-today__weather-wind').innerHTML = data.list[0].wind.speed;
         document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
         document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
