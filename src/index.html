@@ -12,11 +12,10 @@
         <!-- ________________ Bootstrap-4-CSS _________________ -->
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
+
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=98c6e934-2333-43fb-b71d-a6b5b8020bc3&lang=ru_RU" type="text/javascript"></script>
 
         <link rel="stylesheet" href="./css/style.css">
     </head>
@@ -190,8 +189,9 @@
                 <aside>
                     <div class="geolocation">
                         <div class="geolocation-map">
-                            <img src="./assets/img/map-saratov-325x325.jpg"
-                                alt="map">
+                            <!-- <img src="./assets/img/map-saratov-325x325.jpg" alt="pic-map"> -->
+                            <!-- <div id="map" style="width: 400px; height: 400px"></div> -->
+                            <div id="map"></div>
                         </div>
                         <div class="geo-point">
                             <p>
@@ -303,8 +303,6 @@
 
 
 </script>
-        <!-- <script src="./js/index.js"></script> -->
-
 
 
 
@@ -315,6 +313,11 @@
         <!-- <script src="./js/find-your-city.js"></script> -->
 
         <!-- <script src="./js/await-1.js"></script> -->
-        <script src="./js/index.js"></script>
+
+        
+
+        <script src="./js/yandex-map.js"></script>
+
+        <!-- <script src="./js/index.js"></script> -->
     </body>
 </html>

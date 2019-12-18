@@ -497,4 +497,9 @@ aside {
   color: #FFF;
   font-size: 20px;
 }
+
+#map {
+  width: 360px;
+  height: 420px;
+}
 /*# sourceMappingURL=style.css.map */

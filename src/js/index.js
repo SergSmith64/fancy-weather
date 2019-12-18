@@ -168,6 +168,18 @@ function inputYourCity() {
   }
 
 
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+function init(){
+  var myMap = new ymaps.Map("map", {
+    center: [51.544248, 46.049506],
+    zoom: 11
+  });
+}
+
+
+
 
 // var targetUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=51.5265&lon=46.0435&appid=084a72f7662b746a323538af696e70cb';
 
