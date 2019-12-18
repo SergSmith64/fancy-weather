@@ -388,6 +388,12 @@ main {
   font-weight: bold;
 }
 
+@media screen and (max-width: 720px) {
+  .temp-today__temp {
+    font-size: 120px;
+  }
+}
+
 .temp-today__icon {
   margin-top: -15px;
 }
@@ -477,6 +483,14 @@ main {
   font-size: 80px;
   line-height: 98px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 720px) {
+  .temp-day-2__temp,
+  .temp-day-3__temp,
+  .temp-day-4__temp {
+    font-size: 60px;
+  }
 }
 
 .temp-day-2__weather-description,
