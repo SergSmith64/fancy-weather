@@ -41,12 +41,22 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .header-tools {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .header-tools__refresh {
@@ -208,7 +218,6 @@ header {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 375px;
   height: 44px;
   padding: 13px 58px 13px 15px;
   color: #FFF;
@@ -255,7 +264,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 101px;
+  padding-left: 20px;
+  padding-right: 20px;
   height: 44px;
   text-transform: uppercase;
   color: #FFF;

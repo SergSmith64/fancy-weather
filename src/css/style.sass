@@ -7,13 +7,10 @@ body
     min-width: 320px
     color: #FFF
     font-family: 'Roboto', sans-serif
-    // font-family: 'Montserrat', sans-serif
-    // background: url(../assets/img/bg-3.jpg) no-repeat center top
     background: linear-gradient(180deg,rgba(8,15,26,.59) 0,rgba(17,17,46,.46) 100%),
     url(../assets/img/bg-3.jpg) no-repeat center center
     background-size: cover
     // box-shadow: inset 0px 0px 185px rgba(0,0,0,0.4)
-    // height: 100vh
 
 p
     margin: 0
@@ -33,9 +30,11 @@ header
   padding-top: 40px
   padding-bottom: 60px
   justify-content: space-between
+  flex-wrap: nowrap
 
-@media screen and (max-width: 1084px)
+@media screen and (max-width: 720px)
   header
+    flex-wrap: wrap
     // background-color: red
 
 
@@ -43,6 +42,7 @@ header
 
 .header-tools
   display: flex
+  margin-bottom: 20px
 
 .header-tools__refresh
   width: 44px
@@ -151,7 +151,8 @@ header
 .header-search input
   position: relative
   box-sizing: border-box
-  width: 375px
+  // ___ УБИРАЮ ФИКС ШИРИНУ ___
+  // width: 375px
   height: 44px
   padding: 13px 58px 13px 15px
   color: #FFF
@@ -191,7 +192,9 @@ header
   font-style: normal
   line-height: 17px
   display: flex
-  width: 101px
+  // width: 101px
+  padding-left: 20px
+  padding-right: 20px
   height: 44px
   text-transform: uppercase
   color: #FFF
