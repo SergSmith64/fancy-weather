@@ -146,6 +146,7 @@ header
 .header-search
   display: flex
   justify-content: flex-end
+  // background-color: rgba(128, 241, 75, 0.438)
 
 .header-search input
   position: relative
@@ -158,27 +159,26 @@ header
   border-top-left-radius: 5px
   border-bottom-left-radius: 5px
   outline-color: rgba(174,181,185,.5)
-  background: rgba(76,82,85,.4) url(../assets/img/microphone.svg) no-repeat
-  background-position-x: 345px
-  background-position-y: center
+  // ___УБРАЛ МИКРОФОН ___
+  // background: rgba(76,82,85,.4) url(../assets/img/microphone.svg) no-repeat
+  background: rgba(76,82,85,.4) no-repeat
+  // background-position-x: 345px
+  // background-position-y: center
 
-@media screen and (max-width: 780px)
-  .header-search input
-    width: 350px
-    background-position-x: 320px
-    // background-color: green
+// @media screen and (max-width: 780px)
+//   .header-search input
+//     width: 350px
+//     background-position-x: 320px
 
-@media screen and (max-width: 730px)
-  .header-search input
-    width: 320px
-    background-position-x: 280px
-    // background-color: blue
+// @media screen and (max-width: 730px)
+//   .header-search input
+//     width: 320px
+//     background-position-x: 280px
 
-@media screen and (max-width: 700px)
-  .header-search input
-    width: 320px
-    background-position-x: 280px
-    // background-color: brown
+// @media screen and (max-width: 700px)
+//   .header-search input
+//     width: 320px
+//     background-position-x: 280px
 
 .header-search input::placeholder
   opacity: 1
@@ -223,12 +223,23 @@ header
   display: flex
   padding-left: 10px
   padding-right: 10px
+  flex-wrap: nowrap
   // background-color: red
 
+@media screen and (max-width: 768px)
+  .sec-app
+    flex-wrap: wrap
+    // background-color: rgba(238, 223, 18, 0.55)
+
 main
-  flex-basis: 65%
+  flex-basis: 68%
   // padding: 8px
   // background-color: rgba(0, 50, 0, 0.55)
+
+@media screen and (max-width: 768px)
+  main
+    flex-basis: 100%
+    // background-color: rgba(28, 141, 28, 0.226)
 
 // ____________________
 
@@ -320,9 +331,14 @@ main
 .geo-point
   padding-top: 10px
   p
-    text-align: right
+    text-align: center
+    // __координаты справа
     padding-right: 12px
 
+@media screen and (max-width: 768px)
+  .geo-point
+    p
+      text-align: left
 
 .geo-point__latitude,
 .geo-point__longitude
@@ -331,7 +347,8 @@ main
 
 .weather-three-days
   display: flex
-  justify-content: space-between
+  // justify-content: space-between
+  justify-content: space-around
   padding-top: 30px
   padding-bottom: 130px
   // background-color: rgba(0, 0, 0, 0.5)
@@ -367,25 +384,44 @@ main
 // =========== RIGHT BLOCK ==============
 
 aside
-  flex-basis: 35%
+  flex-basis: 32%
   // padding: 8px
   justify-content: flex-end
   // background-color: rgba(0, 0, 50, 0.65)
 
+@media screen and (max-width: 768px)
+  aside
+    flex-basis: 100%
+    // background-color: rgba(102, 10, 60, 0.65)
+
+
 .geolocation
   // align-items: center
 
-.geolocation-map
-  img
-    border-radius: 20px
+// .geolocation-map
+//   img
+//     border-radius: 20px
 
-.geolocation-point
-  text-align: right
+.geo-point
+  // text-align: right
   color: #FFF
   font-size: 20px
+
+.geo-map
+  text-align: right
+  position: relative
+  // background-color: rgba(93, 17, 138, 0.65)
 
 // _______ из Яндекса _________
 
 #map
-  width: 360px
+  width: 320px
   height: 420px
+
+@media screen and (max-width: 768px)
+  #map
+    width: 576px
+
+@media screen and (max-width: 576px)
+  #map
+    width: 320px

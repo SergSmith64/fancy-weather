@@ -216,30 +216,7 @@ header {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   outline-color: rgba(174, 181, 185, 0.5);
-  background: rgba(76, 82, 85, 0.4) url(../assets/img/microphone.svg) no-repeat;
-  background-position-x: 345px;
-  background-position-y: center;
-}
-
-@media screen and (max-width: 780px) {
-  .header-search input {
-    width: 350px;
-    background-position-x: 320px;
-  }
-}
-
-@media screen and (max-width: 730px) {
-  .header-search input {
-    width: 320px;
-    background-position-x: 280px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .header-search input {
-    width: 320px;
-    background-position-x: 280px;
-  }
+  background: rgba(76, 82, 85, 0.4) no-repeat;
 }
 
 .header-search input::-webkit-input-placeholder {
@@ -331,11 +308,27 @@ header {
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .sec-app {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 main {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .geo__city {
@@ -428,8 +421,14 @@ main {
 }
 
 .geo-point p {
-  text-align: right;
+  text-align: center;
   padding-right: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .geo-point p {
+    text-align: left;
+  }
 }
 
 .geo-point__latitude,
@@ -441,9 +440,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-top: 30px;
   padding-bottom: 130px;
 }
@@ -481,25 +479,44 @@ main {
 }
 
 aside {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.geolocation-map img {
-  border-radius: 20px;
+@media screen and (max-width: 768px) {
+  aside {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
-.geolocation-point {
-  text-align: right;
+.geo-point {
   color: #FFF;
   font-size: 20px;
 }
 
+.geo-map {
+  text-align: right;
+  position: relative;
+}
+
 #map {
-  width: 360px;
+  width: 320px;
   height: 420px;
+}
+
+@media screen and (max-width: 768px) {
+  #map {
+    width: 576px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #map {
+    width: 320px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
