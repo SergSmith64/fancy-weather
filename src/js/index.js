@@ -129,7 +129,7 @@ console.log('___здесь__ДОЛГОТА__' + detectLongitude);
 
 
 
-// __________ ВВОД НАЗВАНИЯ ГОРОДА ПО АНГЛИЙСКИ __________dt_txt___list[0].dt_txt___
+// __________ ВВОД НАЗВАНИЯ ГОРОДА ПО АНГЛИЙСКИ ИЛИ ПО РУССКИ ____________
 
 function inputYourCity() {
     var town = document.getElementById("yourCity");
@@ -153,7 +153,6 @@ function inputYourCity() {
         document.querySelector('.temp-today__weather-humidity').innerHTML = data.list[0].main.humidity;
         document.querySelector('.temp-today__weather-pressure').innerHTML = data.list[0].main.pressure;
         document.querySelector('.geo-point__latitude').textContent = data.city.coord.lat;
-
         document.querySelector('.geo-point__longitude').innerHTML = data.city.coord.lon;
         document.querySelector('.temp-day-2__temp').innerHTML = Math.round(data.list[8].main.temp - 273) + '&deg';
         document.querySelector('.temp-day-2__weather-description').innerHTML = data.list[8].weather[0].description;
@@ -161,6 +160,14 @@ function inputYourCity() {
         document.querySelector('.temp-day-3__weather-description').innerHTML = data.list[16].weather[0].description;
         document.querySelector('.temp-day-4__temp').innerHTML = Math.round(data.list[24].main.temp - 273) + '&deg';
         document.querySelector('.temp-day-4__weather-description').innerHTML = data.list[24].weather[0].description;
+
+        // position.coords.latitude = data.city.coord.lat;
+        // position.coords.longitude = data.city.coord.lon;
+        // console.log("широта из DATA =__", position.coords.latitude);
+        // console.log("ДОЛГОТА из DATA=__", position.coords.longitude);
+
+        
+
     })
     .catch(function() {
       console.log("Fetch Error = ...........");
@@ -170,13 +177,23 @@ function inputYourCity() {
 
 // Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+// САРАТОВ ___ 51.544248, 46.049506
+// center: [data.city.coord.lat, data.city.coord.lon],
+// center: [position.coords.latitude, position.coords.longitude],
+
+// __ДОБАВЛЯЮ__
+let maps;
+
 ymaps.ready(init);
 function init(){
   var myMap = new ymaps.Map("map", {
     center: [51.544248, 46.049506],
     zoom: 11
   });
+  // __ДОБАВЛЯЮ__
+  getCoordinat().then((lat, lon) => maps.setCenter([51.544248, 46.049506]));
 }
+
 
 
 
