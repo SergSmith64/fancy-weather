@@ -24,10 +24,17 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+
       {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
-    }
+        test: /.(svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: 'assets/img/[name].[hash:8].[ext]',
+          },
+        },
+      },
     ]
   },
   plugins: [
@@ -43,8 +50,9 @@ module.exports = {
   devtool: 'inline-source-map',
 
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 3000,
+    // contentBase: path.join(__dirname, 'dist'),
+    // compress: true,
+    // port: 3000,
+    hot: true,
   },
 };

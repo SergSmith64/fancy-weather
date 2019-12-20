@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Fancy Weather</title>
-	<link rel="stylesheet" href="./css/normalize.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=98c6e934-2333-43fb-b71d-a6b5b8020bc3&lang=ru_RU" type="text/javascript"></script>
+	<!-- <link rel="stylesheet" href="./css/normalize.css"> -->
 </head>
 <body>
 	<div class="container">
@@ -38,6 +39,7 @@
 			<div class="header-search">
 				<input type="text" placeholder="Search city" id="yourCity" />
 				<!-- <INPUT NAME="username" VALUE ="" SIZE="40" MAXLEGNTH=40 id="fio"> -->
+
 				<div onclick="inputYourCity();">
 					<button>search</button>
 				</div>
@@ -140,7 +142,7 @@
 					<div class="geo-map">
 						<!-- <img src="./assets/img/map-saratov-325x325.jpg" alt="pic-map"> -->
 						<!-- <div id="map" style="width: 400px; height: 400px"></div> -->
-						<div id="map"></div>
+						<div id="map" style="width: 400px; height: 400px"></div>
 					</div>
 					<div class="geo-point">
 						<p>
@@ -161,6 +163,7 @@
 
 	</div><!-- /container-->
 
+	<!-- _____НЕ ТРЕБУЕТСЯ ЗДЕСЬ ЗАГРУЖАТЬ_____-->
 	<!-- <script src="./js/index.js"></script> -->
 </body>
 </html>
