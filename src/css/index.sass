@@ -58,15 +58,23 @@ header
   background-position: center 5px
   box-shadow: inset 0 3px 6px rgba(0,0,0,.2)
 
+// .header-tools__refresh:hover .refresh__arrows
+
 .header-tools__refresh:hover
   box-shadow: inset 0 3px 6px rgba(0,0,0,.6)
+  // transform: rotate(180deg)
+  // transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+.refresh__arrows:hover
+  transform: rotate(180deg)
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
 
 .header-tools__refresh img
   margin-top: 5px
-  animation-name: rotation
-  animation-duration: 2s
-  animation-timing-function: linear
-  animation-iteration-count: infinite
+  // animation-name: rotation
+  // animation-duration: 2s
+  // animation-timing-function: linear
+  // animation-iteration-count: infinite
 
 @-webkit-keyframes rotation
   0%
@@ -249,16 +257,16 @@ main
 
 .geo__country
   font-size: 44px
-  color: red
+  color: #FFF
   font-weight: bold
 
 .geo__date
   font-size: 33px
-  color: red
+  color: #FFF
   
 .geo__time
   font-size: 33px
-  color: yellow
+  color: #FFF
 
 // ____________________
 
